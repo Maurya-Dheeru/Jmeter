@@ -133,3 +133,17 @@
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
+// execute the load test with the 5 users using same jmx file
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1 r1843383">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Nature.com Load Test" enabled="true">
+      <stringProp name="TestPlan.comments">Load test for Nature.com homepage and article exploration</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <stringProp name="TestPlan.user_defined_variables"/>
+      <stringProp name="TestPlan.user_defined_classpath"/>
+      <elementProp name="TestPlan.thread_groups" elementType="ThreadGroup" guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="User Load Group" enabled="true">
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay
